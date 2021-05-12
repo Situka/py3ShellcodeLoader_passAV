@@ -19,17 +19,11 @@ def getkey():
     randstr = random.sample('qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP1234567890',32)
     key = (''.join(randstr))
     return key
-
-shellcode = sys.argv[1]
+shellcode = b''#shellcode
 deshellcode = codecs.escape_decode(shellcode)[0]
 hexshellcode = deshellcode.hex()
 enshellcode = base64.b64encode(hexshellcode.encode('utf-8'))
-#ccode = add_16(enshellcode)
 key = getkey()
 cshell = encrypt(enshellcode,key)
 jsonpost = json.dumps({'key':key,'nonce':cshell[0],'ciphertext':cshell[1]})
 print(jsonpost)
-print('-----------------------------------------------------------')
-print(cshell[2])
-print('-----------------------------------------------------------')
-print(cshell[3])
